@@ -1,0 +1,22 @@
+{
+  "name": "standard",
+  "version": "1.0.0",
+  "description": "前端规范",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": "16.20.2",
+    "npm": "8.19.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.43.1",
+    "eslint": "8.57.0",
+    "husky": "^8.0.3"
+  },
+  "license": "ISC"
+}
