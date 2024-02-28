@@ -1,22 +1,30 @@
 {
   "name": "standard",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.20.2",
+    "npm": "8.19.4"
+  },
+  "license": "ISC",
   "description": "前端规范",
   "author": "",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
-  "engines": {
-    "node": "16.20.2",
-    "npm": "8.19.4"
+  "lint-staged": {
+    "*.{js,ts,vue,jsx,tsx}": [
+      "eslint --cache --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@antfu/eslint-config": "0.43.1",
     "eslint": "8.57.0",
-    "husky": "^8.0.3"
-  },
-  "license": "ISC"
+    "husky": "^8.0.3",
+    "lint-staged": "13.3.0"
+  }
 }
